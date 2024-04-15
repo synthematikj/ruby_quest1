@@ -37,12 +37,12 @@ class QuestController < ApplicationController
   private
 
   def answer_params
-    params.require(:answer).permit(:number)
+    params.require(:answer).permit(:number, :color)
 
   end
 
   def version_params
-    nil
+    params.require(:version).permit(:major, :minor, :patch)
 
   end
 

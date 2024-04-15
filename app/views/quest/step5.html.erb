@@ -26,5 +26,23 @@
 </p>
 
  <!--Подходящее место для формы-->
+  <%= form_tag('/final') do -%>
+
+    <div class='form-field'>
+      <%=label_tag 'major', 'major' %>
+      <%=text_field_tag 'version[major]'%>
+    </div>
+    <div class='form-field'>
+      <%=label_tag 'minor', 'minor' %>
+      <%=text_field_tag 'version[minor]'%>
+    </div>
+    <div class='form-field'>
+      <%=label_tag 'patch', 'patch' %>
+      <%=text_field_tag 'version[patch]'%>
+    </div>
+    <div class='form-field'>
+      <%= submit_tag 'Отправить' %>
+    </div>
+  <% end -%>
   
 </div>
